@@ -6,12 +6,9 @@
 #############################################
 
 __all__ = [
-			"BingSearch",
-			"GoogleSearch",
-			"Netcraft",
-			"PgpSearch",
-			"YahooSearch"
-			]
-
-
-
+	"BingSearch",
+	"GoogleSearch",
+	"Netcraft",
+	"PgpSearch",
+	"YahooSearch"
+]

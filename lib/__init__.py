@@ -4,3 +4,11 @@
 # Infoga - Email Information Gathering      #
 # Coded by Momo Outaadi (M4ll0k) (C) 2017   #
 #############################################
+
+__all__ = [
+	'Colors',
+	'Info',
+	'Net',
+	'Parser',
+	'Printer'
+]

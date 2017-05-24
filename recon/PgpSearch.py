@@ -6,18 +6,20 @@
 #############################################
 
 
-from lib import Net
-from lib import Printer 
-from lib import Parser
 import urlparse
+
+
+# from lib import Net
+# from lib import Parser
+
 
 class Pgpsearch():
 	### Pgp Search ###
-	def __init__(self,Keyword):
+	def __init__(self, Keyword):
 		self.Keyword = Keyword
 		self.Results = ""
 
-	def UrlCheck(self,url):
+	def UrlCheck(self, url):
 		if urlparse.urlsplit(url).netloc == '':
 			if urlparse.urlsplit(url).path.startswith("www."):
 				return ((urlparse.urlsplit(url).path.split("www.")[1]))
@@ -31,14 +33,16 @@ class Pgpsearch():
 
 	def Run(self):
 		try:
-			((html)) = ((Net.Conn().Httplib("pgp.mit.edu","GET","/pks/lookup?search="+str(self.UrlCheck(self.Keyword))+"&op=index","pgp.mit.edu","")))
+			((html)) = ((Net.Conn().Httplib("pgp.mit.edu", "GET",
+			                                "/pks/lookup?search=" + str(self.UrlCheck(self.Keyword)) + "&op=index",
+			                                "pgp.mit.edu", "")))
 			if html:
-				((self.Results)) += ((html)) 
-		except Exception,err:
+				((self.Results)) += ((html))
+		except Exception, err:
 			pass
 
 	def GetEmail(self):
-		((FindEmail)) = ((Parser.MyParser(self.Results,self.UrlCheck(self.Keyword))))
+		((FindEmail)) = ((Parser.MyParser(self.Results, self.UrlCheck(self.Keyword))))
 		return ((FindEmail.Emails()))
 
 	def Process(self):
