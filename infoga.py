@@ -51,7 +51,7 @@ class Infoga(object):
 		print self.c.red(1) + "                       |_____|        " + self.c.end()
 		print self.c.white(0) + "--=[ %s - %s                        " % (self.i.Name(), self.i.Disc()) + self.c.end()
 		print self.c.white(0) + "--=[ %s - \"%s\"                    " % (
-		self.i.Vers(), self.i.CodeName()) + self.c.end()
+			self.i.Vers(), self.i.CodeName()) + self.c.end()
 		print self.c.white(0) + "--=[ %s                             " % (self.i.Author()) + self.c.end()
 		print self.c.white(0) + "--=[ %s                             " % (self.i.Git()) + self.c.end()
 		print ""
@@ -102,7 +102,7 @@ class Infoga(object):
 					print "\t\t|_ %s (%s)" % (new[s], self.sock)
 					print "\t\t\t|"
 					print "\t\t\t|__ Country: %s(%s) - City: %s (%s)" % (
-					jso["country_code"], jso["country_name"], jso["city"], jso["region_code"])
+						jso["country_code"], jso["country_name"], jso["city"], jso["region_code"])
 					print "\t\t\t|__ ASN: %s - ISP: %s" % (jso["asn"], jso["isp"])
 					print "\t\t\t|__ Latitude: %s - Longitude: %s" % (jso["latitude"], jso["longitude"])
 					print "\t\t\t|__ Hostname: %s - Organization: %s" % (jso["hostnames"][0], jso["org"])
@@ -199,7 +199,7 @@ class Infoga(object):
 				print "\t\t|_ %s (%s)" % (new[s], self.sock)
 				print "\t\t\t|"
 				print "\t\t\t|__ Country: %s(%s) - City: %s (%s)" % (
-				jso["country_code"], jso["country_name"], jso["city"], jso["region_code"])
+					jso["country_code"], jso["country_name"], jso["city"], jso["region_code"])
 				print "\t\t\t|__ ASN: %s - ISP: %s" % (jso["asn"], jso["isp"])
 				print "\t\t\t|__ Latitude: %s - Longitude: %s" % (jso["latitude"], jso["longitude"])
 				print "\t\t\t|__ Hostname: %s - Organization: %s" % (jso["hostnames"][0], jso["org"])
